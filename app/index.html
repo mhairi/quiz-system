@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Quiz</title>
+    </head>
+    <body>
+
+        <div ng-app="QuizSystem">
+
+            <div ng-controller="Questions as ctrl">
+            
+                <div ng-repeat="question in ctrl.questions">
+                    <h2>Question {{question.id}} of {{ctrl.questions.length}}</h2>
+                    <p>{{question.q}}</p>
+                    <ol>
+                        <li ng-repeat="val in ctrl.ansValues">
+                            <input type="radio" name="q_{{question.id}}" ng-model="ctrl.answers[question.id]" value="{{val}}">
+                        </li>
+                    </ol>
+                </div>
+                <button type="submit" ng-click="ctrl.submitData()">Submit</button>
+            </div>
+
+        </div>
+
+        <script src="js/dist/app.js"></script>
+    </body>
+</html>

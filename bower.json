@@ -1,0 +1,18 @@
+{
+  "name": "quiz-system",
+  "authors": [
+    "Mhairi McNeill <mhairihmcneill@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

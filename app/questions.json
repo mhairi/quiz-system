@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "q": "This is a question of great importance"
+    },
+    {
+        "id": 2,
+        "q": "Quiz system is well designed and proper"
+    },
+    {
+        "id": 3,
+        "q": "AngularJS is a spiffy framework"
+    },
+    {
+        "id": 4,
+        "q": "Mhairi Makes Quiz Software"
+    }
+]
