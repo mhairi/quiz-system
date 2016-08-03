@@ -15,7 +15,7 @@
                         <p>{{ctrl.question.q}}</p>
                         <ol>
                             <li ng-repeat="val in ctrl.ansValues">
-                                <input type="radio" id="q_{{ctrl.question.id}}_{{val.val}}" name="q_{{ctrl.question.id}}" ng-model="ctrl.answers[ctrl.question.id]" value="{{val.val}}">
+                                <input type="radio" id="q_{{ctrl.question.id}}_{{val.val}}" name="q_{{ctrl.question.id}}" ng-model="ctrl.answers[ctrl.question.id]" ng-value="val.val">
                                 <label for="q_{{ctrl.question.id}}_{{val.val}}">{{val.text}}</label>
                             </li>
                         </ol>

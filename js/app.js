@@ -126,6 +126,10 @@
 
         ctrl.answers = [];
 
+        for (var i = 0; i < ctrl.questions.length; i++) {
+            ctrl.answers[i] = 3;
+        }
+
 
         ctrl.submitData = function () {
             $rootScope.answers = ctrl.answers;
@@ -155,7 +159,10 @@
 
         var ctrl = this;
         
-        var sum = $rootScope.answers.reduce(function (acc, val) {
+        var sum = $rootScope.answers.map(function (val) {
+            var num = Number(val);
+            return isNaN(num) ? 3 : num;
+        }).reduce(function (acc, val) {
             return acc + val;
         }) - 25;
 
