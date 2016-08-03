@@ -1,0 +1,43 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  color: #425258;
+  text-align: center;
+}
+
+
+.header {
+  color: #c31532;
+  font-size: 30px
+}
+
+.content{
+  width: 600px;
+  margin: 0 auto;
+  text-align: left; 
+}
+
+ol.answers {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+
+.answers li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+}
+
+.answers li label {
+    display: block;
+}
+
+.answers li label span {
+    display: block;
+}

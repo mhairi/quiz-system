@@ -3,30 +3,54 @@
     <head>
         <meta charset="utf-8">
         <title>Quiz</title>
+            <link href="css/app.css" rel="stylesheet">
     </head>
     <body>
 
+        <div class="header">
+
+            <h1> Older Workers Quiz </h1>
+
+        </div>
+
         <div ng-app="QuizSystem">
 
-            <div ng-controller="Questions as ctrl" ng-if="!answers">
+            <div class="content" ng-controller="Questions as ctrl" ng-if="!answers">
                 <form>
                     <div>
                         <h2>Question {{ctrl.question.id}} of {{ctrl.questions.length}}</h2>
                         <p>{{ctrl.question.q}}</p>
-                        <ol>
-                            <li ng-repeat="val in ctrl.ansValues">
-                                <input type="radio" id="q_{{ctrl.question.id}}_{{val.val}}" name="q_{{ctrl.question.id}}" ng-model="ctrl.answers[ctrl.question.id]" ng-value="val.val">
-                                <label for="q_{{ctrl.question.id}}_{{val.val}}">{{val.text}}</label>
-                            </li>
+                        <ol class="answers">
+                            
+                                <li ng-repeat="val in ctrl.ansValues">
+                                    <label for="q_{{ctrl.question.id}}_{{val.val}}">
+                                        <span>{{val.text}}</span>
+                                        <input type="radio" id="q_{{ctrl.question.id}}_{{val.val}}" name="q_{{ctrl.question.id}}" ng-model="ctrl.answers[ctrl.question.id]" ng-value="val.val">
+                                    </label>
+                                </li>
+                          
                         </ol>
                     </div>
-                    <button type="button" ng-click="ctrl.changeQuestion(-1)" ng-if="!ctrl.isFirst()">Previous</button>
-                    <button type="submit" ng-click="ctrl.changeQuestion(+1)" ng-if="!ctrl.isLast()">Next</button>
-                    <button type="submit" ng-click="ctrl.submitData()" ng-if="ctrl.isLast()">Submit</button>
+                    <br>
+                    <br>
+                    <button class="btn btn-default btn-sm pull-left" type="button" ng-click="ctrl.changeQuestion(-1)" ng-if="!ctrl.isFirst()">
+
+                         <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous
+
+                    </button>
+                   
+                    <button class="btn btn-default btn-sm pull-right" type="submit" ng-click="ctrl.changeQuestion(+1)" ng-if="!ctrl.isLast()">
+                         <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Next
+                    </button>
+                    
+                    <button class="btn btn-default btn-sm pull-right" type="submit" ng-click="ctrl.submitData()" ng-if="ctrl.isLast()">
+                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Submit
+                    </button>
+
                 </form>
             </div>
 
-            <div ng-controller="Results as ctrl" ng-if="answers">
+            <div class="result" ng-controller="Results as ctrl" ng-if="answers">
                 <h1>Thanks for taking the quiz!</h1>
                 <p>You {{ctrl.result()}}</p>
             </div>

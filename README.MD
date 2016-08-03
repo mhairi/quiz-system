@@ -9,12 +9,11 @@ This is an AngularJS project for doing rating quizzes.
 3. Run `npm install`
 4. Run `bower install`
 5. Run `gulp` for un-minified code or `gulp release` for minified code.
+6. The code is built into the app directory and can be served with any old webserver
 
 
 ## Running locally
 
-After running gulp run
+After completing steps 1-4 above run `gulp watch`.
 
-`npm start`
-
-to bring up a local webserver on port 8000.
+This will build files and watch for changes and start a webserver at http:localhost:3000
